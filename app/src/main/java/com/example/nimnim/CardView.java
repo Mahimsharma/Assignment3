@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nimnim.Utils.NoteDao;
@@ -24,7 +25,8 @@ public class CardView extends AppCompatActivity {
     private TextView textViewCount;
     private Button buttonUpdate;
     private Button buttonAddNote;
-    private View.OnClickListener onClickListener;
+    private View.OnClickListener onClickListener = v -> buttonClick(v);
+
 
     boolean flag;
 
@@ -62,7 +64,8 @@ public class CardView extends AppCompatActivity {
         }
         else {
             textViewCount.setText("0");
-            getSupportActionBar().setTitle("Add Card");
+            ActionBar actionBar= getSupportActionBar();
+            actionBar.setTitle("Add Card");
             Button button_update = findViewById(R.id.button_update);
             button_update.setVisibility(View.GONE);
         }

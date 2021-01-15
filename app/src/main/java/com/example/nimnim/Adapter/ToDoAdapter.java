@@ -63,15 +63,13 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.CardViewHolder
 
     public static class CardViewHolder extends RecyclerView.ViewHolder
     {
-        private Notes notes;
+
         TextView cardTitle,cardDescription;
         CardViewHolder(View view)
         {
             super(view);
             cardTitle = view.findViewById(R.id.cardTitle);
             cardDescription = view.findViewById(R.id.cardDescription);
-
-
         }
     }
 }

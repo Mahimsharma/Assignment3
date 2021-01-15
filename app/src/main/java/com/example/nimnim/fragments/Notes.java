@@ -23,6 +23,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 public class Notes extends Fragment {
     private RecyclerView recyclerView;
@@ -32,14 +33,16 @@ public class Notes extends Fragment {
     private NoteDao noteDao;
     private FloatingActionButton fab;
     private Toolbar toolbar;
-
+    private AppCompatActivity activity;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.notes, container, false);
         toolbar = view.findViewById(R.id.toolbar);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Tasks");
+        activity =(AppCompatActivity)getActivity();
+        assert activity != null;
+        activity.setSupportActionBar(toolbar);
+        Objects.requireNonNull(activity.getSupportActionBar()).setTitle("Tasks");
 
         fab = view.findViewById(R.id.fab);
         noteDao =  NoteDatabase.getInstance(getContext()).getNoteDao();

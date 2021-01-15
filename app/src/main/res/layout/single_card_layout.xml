@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/cardTitle"
             android:layout_marginTop="4dp"
-            android:layout_marginRight="32dp"
+            android:layout_marginEnd="32dp"
             android:text="This is an example of card description jkashdij iha sil dfhillashdliajdil kasdhkajsd"
             android:textColor="#777777"
             android:textSize="14dp" />
@@ -39,12 +39,11 @@
             android:id="@+id/imageButton"
             android:layout_width="32dp"
             android:layout_height="29dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginTop="0dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginEnd="0dp"
             android:background="@android:color/white"
             app:srcCompat="@drawable/ic_baseline_delete" />
-
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
