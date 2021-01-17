@@ -2,33 +2,30 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
-    <item android:title="search"
-        android:icon="@drawable/ic_baseline_time_to_leave"
+    <item
         android:id="@+id/search"
-        app:showAsAction="ifRoom|collapseActionView"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
     <item android:title="spanOptions"
-        android:icon="@drawable/ic_baseline_more_vert_24"
-        android:id="@+id/spanOptions"
-        app:showAsAction="ifRoom|collapseActionView"
-        app:actionViewClass="androidx.appcompat.widget.SearchView">
+        android:id="@+id/spanMenu"
+    >
+    <item
+        android:id="@+id/one"
+        android:title="One"/>
 
-        <item
-            android:id="@+id/one"
-            android:title="One"/>
+    <item
+        android:id="@+id/two"
+        android:title="Two"/>
 
-        <item
-            android:id="@+id/two"
-            android:title="Two"/>
-
-        <item
-            android:id="@+id/three"
-            android:title="Three"/>
-        <item
-            android:id="@+id/four"
-            android:title="Four"/>
-
-
+    <item
+        android:id="@+id/three"
+        android:title="Three"/>
+    <item
+        android:id="@+id/four"
+        android:title="Four"/>
     </item>
+
 
 </menu>

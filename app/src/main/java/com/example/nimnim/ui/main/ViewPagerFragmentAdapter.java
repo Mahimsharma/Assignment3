@@ -1,5 +1,7 @@
 package com.example.nimnim.ui.main;
 
+import android.content.Context;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -25,7 +27,7 @@ public class ViewPagerFragmentAdapter extends FragmentStateAdapter {
             case 0:
                 return new Notes();
             case 1:
-                return new Photos();
+                return Photos.newInstance();
             case 2:
                 return new frag3();
         }

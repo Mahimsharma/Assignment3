@@ -7,23 +7,24 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 @Database(entities = { NotesEntity.class }, version = 1)
+
 public abstract class NoteDatabase extends RoomDatabase {
 
-    public abstract com.example.nimnim.Utils.NoteDao getNoteDao();
+    public abstract NoteDao getNoteDao();
 
     private static final String dbName= "NotesDB";
-    private static com.example.nimnim.Utils.NoteDatabase noteDB;
+    private static NoteDatabase noteDB;
 
-    public static com.example.nimnim.Utils.NoteDatabase getInstance(Context context) {
+    public static NoteDatabase getInstance(Context context) {
         if (null == noteDB) {
             noteDB = buildDatabaseInstance(context);
         }
         return noteDB;
     }
 
-    private static com.example.nimnim.Utils.NoteDatabase buildDatabaseInstance(Context context) {
+    private static NoteDatabase buildDatabaseInstance(Context context) {
         return Room.databaseBuilder(context,
-                com.example.nimnim.Utils.NoteDatabase.class,
+                NoteDatabase.class,
                 dbName)
                 .allowMainThreadQueries().build();
     }
